@@ -1,0 +1,7 @@
+plugins:
+  discourse_stripe_enabled:
+    default: true
+    client: true
+  discourse_stripe_webhook_secret:
+    default: ""
+    client: false
