@@ -2,3 +2,4 @@ en:
   site_settings:
     discourse_stripe_enabled: 'Enable Discourse Stripe'
     discourse_stripe_webhook_secret: 'Stripe Webhook Secret: Used to validate webhook calls'
+    discourse_stripe_group_assignment: 'Which groups for which Stripe plans? In this format "Group Name:Stripe Product ID" Ex: "subscriber-group:prod_XXXXXXXXXX'

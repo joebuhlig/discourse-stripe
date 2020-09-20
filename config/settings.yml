@@ -1,7 +1,11 @@
 plugins:
   discourse_stripe_enabled:
     default: true
-    client: true
+    client: false
   discourse_stripe_webhook_secret:
     default: ""
     client: false
+  discourse_stripe_group_assignment:
+    default: ""
+    client: false
+    type: list
