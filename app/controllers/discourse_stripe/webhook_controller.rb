@@ -77,11 +77,14 @@ module DiscourseStripe
                 end
               end
             end
+          else
+            return 400
           end
+        else
+          return 400
         end
-     end
+      end
 
-      return 200
     end
   end
 end
