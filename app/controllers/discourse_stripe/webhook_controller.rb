@@ -34,7 +34,7 @@ module DiscourseStripe
         end
         user.custom_fields[:stripe_customer_id] = event['data']['object']['id']
         user.save
-        return user
+        return render(json: user)
       elsif event['type'] == 'customer.subscription.created'
         customer_id = event['data']['object']['customer']
         user_cf = UserCustomField.find_by(value: customer_id)
@@ -51,7 +51,7 @@ module DiscourseStripe
 
                   dc_group.add(user)
                   dc_group.save
-                  return user
+                  return render(json: user)
                 end
               end
             end
@@ -73,7 +73,7 @@ module DiscourseStripe
 
                   dc_group.remove(user)
                   dc_group.save
-                  return user
+                  return render(json: user)
                 end
               end
             end
